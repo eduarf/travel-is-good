@@ -1,0 +1,58 @@
+/*
+
+light blue: #00A1E1
+medium blue: #0078E1;
+dark blue: #0050E1;
+
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 16px;
+}
+body {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  color: rgb(23, 22, 22);
+  padding: 1.5rem;
+}
+.header {
+  height: 95vh;
+  position: relative;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(0, 161, 225, 0.8),
+      rgba(0, 80, 225, 0.7)
+    ),
+    url("../images/header-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+.header__logo-box {
+    position: absolute;
+    top: 3%;
+    left: 2%;
+}
+.header__logo{
+    height: 5rem;
+}
+.header__heading-primary{
+    color: #fff;
+    text-transform: uppercase;
+}
+.header__main-title{
+    display: block;
+    font-weight: 600;
+    letter-spacing: 2rem;
+    font-size: 3rem;
+}
+.header__sub-title{
+    display: block;
+    font-weight: 400;
+    font-size: 2rem;
+    letter-spacing: 2rem;
+}
