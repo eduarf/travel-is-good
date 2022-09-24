@@ -45,11 +45,13 @@ body {
   top: 40%;
   left: 50%;
   transform: translate(-50%,-50%);
+  text-align: center;
 }
 .header__heading-primary{
     color: #fff;
     text-transform: uppercase;
     backface-visibility: hidden;
+    margin-bottom: 3rem;
 }
 .header__main-title{
     display: block;
@@ -69,32 +71,89 @@ body {
     letter-spacing: 2.08rem;
     animation-name: moveInRight;
     animation-duration: 1s;
-    animation-delay: 0.7s;
+    animation-delay: 0.5s;
+}
+.button:link, .button:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1rem 3rem;
+  display: inline-block;
+  border-radius: .2rem;
+  transition: all .3s;
+}
+.button-white{
+  background-color: #fff;
+  color: #777;
+  position: relative;
+  animation-name: moveInBottom;
+  animation-duration: 1s;
+  animation-delay: .2s;
+}
+.button:hover{
+  transform: translateY(-.3rem);
+  box-shadow: 10px 10px 1px rgba(0,0,0,.3);
+}
+.button:active{
+  transform: translateY(-.1rem);
+}
+
+.button::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: .2rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all .3s;
+}
+.button-white::after {
+  background-color: #fff;
+}
+.button:hover::after{
+  transform: scaleY(3) scaleX(2);
+  opacity: 0;
 }
 
 @keyframes moveInLeft {
   0%{
     opacity: 0;
-    transform: translateX(-20rem) rotate(90deg);
+    transform: translateX(-20rem) rotate(90deg) scale(0);
   }
-  60%{
-    transform: translateX(10rem) rotate(45deg);
+  75%{
+    transform: translateX(10rem) rotate(45deg) scale(.5);
   }
   100%{
     opacity: 1;
-    transform: translateX(0) rotate(0deg);
+    transform: translateX(0) rotate(0deg) scale(1);
   }
 }
 @keyframes moveInRight {
   0%{
     opacity: 0;
-    transform: translateX(20rem) rotate(-90deg);
+    transform: translateX(20rem) rotate(-90deg) scale(0);
   }
   75%{
-    transform: translateX(-10rem) rotate(-45deg);
+    transform: translateX(-10rem) rotate(-45deg) scale(.5);
   }
   100%{
     opacity: 1;
-    transform: translateX(0) rotate(0deg);
+    transform: translateX(0) rotate(0deg) scale(1);
+  }
+}
+
+@keyframes moveInBottom {
+  0%{
+    opacity: 0;
+    transform: translateY(20rem) rotate(-90deg) scale(0);
+  }
+  75%{
+    transform: translateY(-10rem) rotate(-45deg) scale(.5);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0) rotate(0deg) scale(1);
   }
 }
