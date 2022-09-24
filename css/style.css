@@ -40,6 +40,12 @@ body {
 .header__logo{
     height: 5rem;
 }
+.header__text-box{
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
 .header__heading-primary{
     color: #fff;
     text-transform: uppercase;
@@ -47,12 +53,13 @@ body {
 .header__main-title{
     display: block;
     font-weight: 600;
-    letter-spacing: 2rem;
+    letter-spacing: 2.1rem;
     font-size: 3rem;
+    margin-bottom: 2rem;
 }
 .header__sub-title{
     display: block;
     font-weight: 400;
     font-size: 2rem;
-    letter-spacing: 2rem;
+    letter-spacing: 2.08rem;
 }
