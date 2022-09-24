@@ -56,10 +56,44 @@ body {
     letter-spacing: 2.1rem;
     font-size: 3rem;
     margin-bottom: 2rem;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-delay: .5s;
+    /* animation: moveInRight 1s ease-in  anima*/
 }
 .header__sub-title{
     display: block;
     font-weight: 400;
     font-size: 2rem;
     letter-spacing: 2.08rem;
+    animation-name: moveInRight;
+    animation-duration: 1s;
+    animation-delay: .5s;
+}
+
+@keyframes moveInLeft {
+  0%{
+    opacity: 0;
+    transform: translateX(-20rem);
+  }
+  75%{
+    transform: translateX(10rem);
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes moveInRight {
+  0%{
+    opacity: 0;
+    transform: translateX(20rem);
+  }
+  75%{
+    transform: translateX(-10rem);
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
