@@ -1,0 +1,27 @@
+{
+  "name": "travel_is_good",
+  "version": "1.0.0",
+  "description": "travel is good website",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eduarf/travel-is-good.git"
+  },
+  "keywords": [
+    "responsive",
+    "website",
+    "software"
+  ],
+  "author": "The Great B",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eduarf/travel-is-good/issues"
+  },
+  "homepage": "https://github.com/eduarf/travel-is-good#readme",
+  "devDependencies": {
+    "node-sass": "^7.0.3"
+  }
+}
