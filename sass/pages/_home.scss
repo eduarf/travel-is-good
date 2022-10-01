@@ -3,3 +3,26 @@
     padding: 25rem 0;
     margin-top: -14vh; 
 }
+.section-features {
+    padding: 20rem 0;
+    margin-top: -6rem;
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary-light, 0.8),
+        rgba($color-primary-dark, 0.7)
+      ),
+      url("../images/header-bg.jpg");
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      transform: skewY(-5deg);
+      & > * {
+        transform: skewY(5deg);
+      }
+  }
+
+  .section-tours {
+    background-color: $color-gray-light;
+    padding: 25rem 0 50rem 0;
+    margin-top: -10rem;
+  }
