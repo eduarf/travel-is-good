@@ -1,9 +1,9 @@
 .button{
+    padding: 2rem 6rem;
     &:link,
     &:visited{
         text-transform: uppercase;
         text-decoration: none;
-        padding: 2rem 6rem;
         display: inline-block;
         border-radius: 0.2rem;
         transition: all 0.2s;
@@ -68,4 +68,8 @@
         box-shadow: 0 .5rem 2rem rgba(0, 0, 0, .15);
         transform: translateY(0);
     }
+}
+
+.button--mid{
+    padding: 1.7rem 5rem;
 }
