@@ -145,6 +145,21 @@ body {
   .button--white::after {
     background-color: #fff; }
 
+.button--primary {
+  background-color: #0078e1;
+  color: #fff;
+  position: relative;
+  animation-name: moveInBottom;
+  animation-duration: 1s;
+  animation-delay: 0.2s; }
+  .button--primary::after {
+    background-color: #0078e1; }
+
+.button--radius {
+  border-radius: 3rem !important; }
+  .button--radius::after {
+    border-radius: 3rem; }
+
 .btn-text:link, .btn-text:visited {
   color: #0078e1;
   display: inline-block;
@@ -360,7 +375,7 @@ body {
     object-fit: cover; }
 
 .form__group:not(:last-child) {
-  margin-bottom: 2rem; }
+  margin-bottom: 4rem; }
 
 .form__input {
   font-family: inherit;
@@ -373,13 +388,14 @@ body {
   transition: all .5;
   border-bottom: 3px solid transparent;
   width: 70%;
-  display: block; }
+  display: block;
+  transition: all .5s; }
   .form__input:focus {
     outline: none;
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
-    border-bottom: 3px solid #0050e1; }
+    border-bottom: 3px solid green; }
   .form__input:focus:invalid {
-    border-bottom: 3px solid #ff7730; }
+    border-bottom: 3px solid red; }
   .form__input::-webkit-input-placeholder {
     color: #514e4e; }
 
@@ -395,6 +411,45 @@ body {
   opacity: 0;
   visibility: hidden;
   transform: translateY(-4rem); }
+
+.form__radio-group {
+  width: 45%;
+  display: inline-block; }
+
+.form__radio-label {
+  font-size: 1.6rem;
+  cursor: pointer;
+  position: relative;
+  padding-left: 4.5rem; }
+
+.form__radio-button {
+  height: 3rem;
+  width: 3rem;
+  border: 5px solid #0078e1;
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: -1rem; }
+  .form__radio-button::after {
+    content: '';
+    display: block;
+    height: 1.8rem;
+    width: 1.8rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #0078e1;
+    opacity: 0;
+    transition: all .2s; }
+
+.form__radio-input:checked + .form__radio-label > .form__radio-button::after {
+  opacity: 1; }
+
+.form__radio-input {
+  display: none; }
 
 .header {
   height: 95vh;

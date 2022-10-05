@@ -46,6 +46,24 @@
     background-color: #fff;
   }
 }
+.button--primary {
+    background-color: $color-primary;
+    color: #fff;
+    position: relative;
+    animation-name: moveInBottom;
+    animation-duration: 1s;
+    animation-delay: 0.2s; 
+    &::after{
+      background-color: $color-primary;
+    }
+}
+.button--radius{
+    border-radius: 3rem !important;
+    &::after{
+        border-radius: 3rem;
+    }
+
+}
 
 .btn-text {
     &:link,
