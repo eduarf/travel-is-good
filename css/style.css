@@ -463,7 +463,8 @@ body {
     top: 3%;
     left: 2%; }
   .header__logo {
-    height: 7rem; }
+    height: 7rem;
+    margin-top: 3.5rem; }
   .header__text-box {
     position: absolute;
     top: 40%;
@@ -551,7 +552,10 @@ body {
   top: 6rem;
   right: 6rem;
   border-radius: 50%;
-  z-index: 200; }
+  z-index: 200;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  text-align: center; }
 
 .navigation__background {
   height: 6rem;
@@ -560,17 +564,20 @@ body {
   position: fixed;
   top: 6.5rem;
   right: 6.5rem;
+  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
   background-image: radial-gradient(#00a1e1, #0050e1);
-  z-index: 100;
-  transform: scale(80); }
+  z-index: 100; }
 
 .navigation__nav {
   height: 100vh;
-  width: 100%;
   position: fixed;
-  top: 0;
   right: 0;
-  z-index: 150; }
+  top: 0;
+  z-index: 150;
+  width: 0;
+  top: -100%;
+  opacity: 0;
+  transition: all .8s; }
 
 .navigation__list {
   position: absolute;
@@ -591,6 +598,7 @@ body {
   color: #fff;
   text-decoration: none;
   text-transform: uppercase;
+  transition: all .5s;
   background-image: linear-gradient(130deg, transparent 0%, transparent 50%, #fff 50%);
   background-size: 300%;
   transition: all 0.5s; }
@@ -599,6 +607,38 @@ body {
   background-position: 100%;
   color: #0050e1;
   transform: scale(1.2); }
+
+.navigation__checkbox:checked ~ .navigation__background {
+  transform: scale(80); }
+
+.navigation__checkbox:checked ~ .navigation__nav {
+  width: 100%;
+  top: 0;
+  opacity: 1; }
+
+.navigation__icon {
+  position: relative;
+  margin-top: 3.3rem; }
+  .navigation__icon, .navigation__icon::before, .navigation__icon::after {
+    width: 4rem;
+    height: 3px;
+    background-color: #514e4e;
+    display: inline-block; }
+  .navigation__icon::before, .navigation__icon::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    transition: all .2s; }
+  .navigation__icon::before {
+    top: -.8rem; }
+  .navigation__icon::after {
+    top: .8rem; }
+
+.navigation__button:hover .navigation__icon::before {
+  top: -1rem; }
+
+.navigation__button:hover .navigation__icon::after {
+  top: 1rem; }
 
 .section-about {
   background-color: #f7f4f4;
