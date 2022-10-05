@@ -508,6 +508,11 @@ body {
     height: 10rem;
     background-color: #0050e1;
     border-radius: 50%; }
+  .footer__navigation {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    border-top: 1px solid #514e4e;
+    border-bottom: 1px solid #514e4e; }
   .footer__list {
     list-style: none; }
   .footer__item {
@@ -526,8 +531,14 @@ body {
       color: #0078e1;
       box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
       transform: rotateZ(20deg) scale(1.2); }
-  .footer__copyright a {
-    margin-right: 1rem; }
+  .footer__copyright {
+    border-top: 1px solid #514e4e;
+    border-bottom: 1px solid #514e4e;
+    padding-top: 2rem;
+    padding-bottom: 2rem; }
+    .footer__copyright a {
+      margin-right: 1rem;
+      color: #28b485 !important; }
 
 .section-about {
   background-color: #f7f4f4;
