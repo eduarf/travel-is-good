@@ -5,7 +5,13 @@
     position: fixed;
     left: 0;
     top: 0;
-    z-index: 1000;    
+    z-index: 1000;   
+    opacity: 0;
+    visibility: hidden;
+    &:target{
+        visibility: visible;
+        opacity: 1;
+    }
     &__content {
         @include absCenter;
         width: 75%;
@@ -22,7 +28,7 @@
     }
     &__right{
         width: 66.6%;
-        height: 70%;
+        height: 85%;
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
@@ -41,5 +47,18 @@
         line-height: 2.2rem;
         letter-spacing: .3px;
         text-align: justify;
+
+        -moz-column-count: 2;
+        -ms-column-gap: 4rem;
+        -webkit-column-rule: 1px solid $color-gray-dark;
+
+        column-count: 2;
+        column-gap: 4rem;
+        column-rule: 1px solid $color-gray-dark;
+
+        -moz-hyphens: auto;
+        -ms-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
     }
 }
