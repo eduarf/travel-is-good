@@ -12,6 +12,9 @@ html {
   @media (max-width: 56.25em) {
     html {
       font-size: 50%; } }
+  @media (max-width: 37.5em) {
+    html {
+      font-size: 40%; } }
   @media (min-width: 112.5em) {
     html {
       font-size: 75%; } }
@@ -54,6 +57,9 @@ body {
   font-weight: 400;
   color: #514e4e;
   padding: 0 2rem; }
+  @media (max-width: 56.25em) {
+    body {
+      padding: 0; } }
 
 .heading-primary {
   color: #fff;
@@ -69,6 +75,10 @@ body {
     animation-name: moveInLeft;
     animation-duration: 1s;
     animation-delay: 0s; }
+    @media (max-width: 37.5em) {
+      .heading-primary--main {
+        letter-spacing: 1rem;
+        font-size: 5rem; } }
   .heading-primary--sub {
     display: block;
     font-weight: 400;
@@ -77,6 +87,9 @@ body {
     animation-name: moveInRight;
     animation-duration: 1s;
     animation-delay: 0.1s; }
+    @media (max-width: 37.5em) {
+      .heading-primary--sub {
+        letter-spacing: 1rem; } }
 
 .heading-secondary {
   font-size: 3.5rem;
@@ -84,10 +97,17 @@ body {
   font-weight: 500;
   background-image: linear-gradient(to right, #00a1e1, #0050e1);
   display: inline-block;
+  background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
   letter-spacing: .2rem;
   transition: all .3s; }
+  @media (max-width: 56.25em) {
+    .heading-secondary {
+      font-size: 3rem; } }
+  @media (max-width: 37.5em) {
+    .heading-secondary {
+      font-size: 2.5rem; } }
   .heading-secondary:hover {
     transform: skewX(-30deg);
     text-shadow: 0.5rem 1rem 2rem rgba(0, 120, 225, 0.2); }
@@ -560,6 +580,12 @@ body {
   margin: 0 auto; }
   .row:not(:last-child) {
     margin-bottom: 8rem; }
+    @media (max-width: 56.25em) {
+      .row:not(:last-child) {
+        margin-bottom: 6rem; } }
+  @media (max-width: 56.25em) {
+    .row {
+      max-width: 45rem; } }
   .row::after {
     content: "";
     display: table;
@@ -568,6 +594,13 @@ body {
     float: left; }
     .row [class^="col-"]:not(:last-child) {
       margin-right: 6rem; }
+      @media (max-width: 56.25em) {
+        .row [class^="col-"]:not(:last-child) {
+          margin-right: 0;
+          margin-bottom: 6rem; } }
+    @media (max-width: 56.25em) {
+      .row [class^="col-"] {
+        width: 100% !important; } }
   .row .col-1-of-2 {
     width: calc((100% - 6rem) / 2); }
   .row .col-1-of-3 {
@@ -639,6 +672,10 @@ body {
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
   cursor: pointer;
   text-align: center; }
+  @media (max-width: 56.25em) {
+    .navigation__button {
+      top: 7rem;
+      right: 7rem; } }
 
 .navigation__background {
   height: 6rem;
@@ -649,7 +686,8 @@ body {
   right: 6.5rem;
   transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
   background-image: radial-gradient(#00a1e1, #0050e1);
-  z-index: 100; }
+  z-index: 100;
+  opacity: 0; }
 
 .navigation__nav {
   height: 100vh;
@@ -692,7 +730,8 @@ body {
   transform: scale(1.2); }
 
 .navigation__checkbox:checked ~ .navigation__background {
-  transform: scale(80); }
+  transform: scale(80);
+  opacity: 1; }
 
 .navigation__checkbox:checked ~ .navigation__nav {
   width: 100%;
